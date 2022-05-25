@@ -1,10 +1,13 @@
 <template>
-  <the-header></the-header>
-  <div class="bg-gray-900">contetn</div>
-  <the-bpm></the-bpm>
-  <TheTimer @cadence-event="setBpm" />
-  <BpmInput />
-  <TheResults v-if="playlist !== ''" :playlist="playlist" />
+  <div class="">
+    <the-header></the-header>
+    <!-- <div class="bg-gray-900">contetn</div> -->
+    <the-bpm></the-bpm>
+    <TheTimer @cadence-event="setBpm" />
+    <TheCadence />
+    <BpmInput />
+    <TheResults v-if="playlist !== ''" :playlist="playlist" />
+  </div>
 </template>
 
 <script>
@@ -13,6 +16,7 @@ import TheBpm from "./components/TheBpm.vue";
 import BpmInput from "./components/BpmInput.vue";
 import TheTimer from "./components/TheTimer.vue";
 import TheResults from "./components/TheResults.vue";
+import TheCadence from "./components/TheCadence.vue";
 
 export default {
   data() {
@@ -51,6 +55,7 @@ export default {
     BpmInput,
     TheTimer,
     TheResults,
+    TheCadence,
   },
   methods: {
     setBpm(cadence) {
