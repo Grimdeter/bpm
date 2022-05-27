@@ -1,5 +1,5 @@
 <template>
-  <div class="columns-2">
+  <div class="columns-2 mb-10">
     <div class="flex items-center justify-center">
       <img
         src="https://images.squarespace-cdn.com/content/v1/5b4d519cf79392aa9bf1f38e/42ee5807-5259-4275-b7ff-a48a87933cb9/Cadence-Logo-Main.png"
@@ -40,24 +40,6 @@
           </div>
         </div>
       </div>
-      <!-- <p>
-        One of the ways that we can tune your walking to BPM will be my
-        measuring you steps per minute (cadence)
-      </p>
-      <p>
-        Need help identifying walking cadence? Just press this
-        <button @click="TimerMethod">BUTTON</button> and count how many steps
-        you had taken.
-      </p>
-      <p>App will notify you when 15 seconds had passed</p>
-      <p>Then enter number of steps you had taken into a field below</p>
-      <input
-        type="number"
-        v-model="enteredCadence"
-        name="cadence"
-        id="cadenceInput"
-      />
-      <p v-if="cadence !== null">Your cadence is {{ cadence }}</p> -->
     </div>
   </div>
 </template>

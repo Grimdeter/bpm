@@ -3,9 +3,9 @@
     <the-header></the-header>
     <!-- <div class="bg-gray-900">contetn</div> -->
     <the-bpm></the-bpm>
-    <TheTimer @cadence-event="setBpm" />
-    <TheCadence />
-    <BpmInput />
+    <TheTimer />
+    <TheCadence @cadence-event="setBpm" />
+    <BpmInput @setBpm="setBpm" />
     <TheResults v-if="playlist !== ''" :playlist="playlist" />
   </div>
 </template>
@@ -76,6 +76,7 @@ export default {
         default:
           break;
       }
+      console.log(this.playlist);
     },
   },
 };

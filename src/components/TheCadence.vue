@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="mb-6 mx-auto w-3/6">
     <p>Then enter number of steps you had taken into a field below</p>
-    <div class="mb-6">
+    <div>
       <label
         for="default-input"
         class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-        >Default input</label
+        >Cadence input</label
       >
       <input
         type="text"
@@ -14,8 +14,9 @@
         v-model="enteredCadence"
       />
     </div>
-    <p v-if="realCadence !== null">Your cadence is {{ realCadence }}</p>
-    -->
+    <p class="mb-6 mt-5" v-if="realCadence !== null">
+      Your cadence is {{ realCadence }} steps per minute
+    </p>
   </div>
 </template>
 
@@ -27,9 +28,12 @@ export default {
       realCadence: null,
     };
   },
+  emits: ["cadence-event"],
   watch: {
     enteredCadence() {
       this.realCadence = this.enteredCadence * 4;
+      this.$emit("cadence-event", this.realCadence);
+      console.log("hi");
     },
   },
 };
